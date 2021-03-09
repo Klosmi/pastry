@@ -1,0 +1,9 @@
+<h1>All Tools</h1>
+<% @tools.each do |tool| %>
+     <%= tool.name %>
+     <%= tool.details %>
+     <%= tool.category %>
+     <%= tool.price_by_day %>
+     <%= tool.picture %>
+     <% end %>
+ <%= link_to"see details", tool_path(@tools) %>
