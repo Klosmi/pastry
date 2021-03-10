@@ -2,4 +2,12 @@
   width: 100%;
   height: auto;
 }
+.row1{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+}
 
+.image-ustensil img{
+  height:200px;
+}

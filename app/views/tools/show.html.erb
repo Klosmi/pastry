@@ -5,34 +5,33 @@
 <br>
 <body>
   <div class="container">
-      <% @tools.each do |tool| %>
-      <%= link_to  tool_path(tool) do  %>
 
-    <div class="row">
 
-      <div class="col-4">
-        <img src= https://files.meilleurduchef.com/mdc/photo/produit/mfr/mallette-patissier-25-pieces/mallette-patissier-25-pieces-1-main-650.jpg alt="Responsive image" class="img-fluid">
+
+    <div class="row1">
+
+      <div class="image-ustensil">
+       <%= image_tag @tool.picture, alt: "Responsive image", class: "img-fluide"   %>
         <br>
         <br>
         <button type="button" class="btn btn-secondary btn-lg"> + Book</button>
       </div>
 
-      <div class="col-5">
-        <h4 class="text-sm-left"><%= tool.category %></h4>
+      <div class="col-8">
+        <h4 class="text-sm-left"><%= @tool.category %></h4>
 
         <br>
-        <h3 class="text-sm-left"><%= tool.name %></h3>
-        <p class="text-sm-left"><%= tool.description %></p>
+        <h3 class="text-sm-left"><%= @tool.name %></h3>
+        <p class="text-sm-left"><%= @tool.details %></p>
         <br>
-        <h2 class="text-sm-left">tool.price_by day</h2>
+        <h2 class="text-sm-left"><%= @tool.price_by_day %> €</h2>
 
       </div>
-      <div class="col-3">
+      <div class="col-2">
         <h4 class="text-center">reviews</h4>
       </div>
     </div>
-     <% end %>
-    <% end %>
+
   </div>
 
 </body>
