@@ -2,7 +2,7 @@ class ToolsController < ApplicationController
 
   # Get/tools
   def index
-    # @tool = Tool.find(params[:id])
+    @tool = Tool.find(params[:id])
     @tools = Tool.all
   end
 
@@ -19,7 +19,7 @@ class ToolsController < ApplicationController
   #   @tool = Tool.find(params[:id])
   # end
 
-  # def tool_params
-  #   params.require(:tool).permit(:name, :details, :price_by_day, :picture, :category, :user_id)
-  # end
+   def params
+     params.require(:tool).permit(:name, :details, :price_by_day, :picture, :category, :user_id)
+   end
 end
