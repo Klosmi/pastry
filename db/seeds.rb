@@ -1,15 +1,17 @@
 Tool.destroy_all if Rails.env.development?
-user= User.new(email:"linda@yahoo.fr", password: "password")
+## Code Linda ##
+user= User.new(email:"lindak6@yahoo.fr")
 user.save
+## Code Equipe ##
+#user.save
 
 Tool.create!(
         name: "Molds for cupcake",
-        details: "2nMuffins Tray 6 Stick resistant coating for quick release. Easy to clean Food grade Xynflon coating. Made with carbon steelDimensions W x D x H : 26.5x18.5x2.5cm",
+        details: "2 Muffins Tray 6 Stick resistant coating for quick release. Easy to clean Food grade Xynflon coating. Made with carbon steelDimensions W x D x H : 26.5x18.5x2.5cm",
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615227032/5d4785af5dfd6_zamxr9.jpg",
         category: "mold",
         user_id: user.id
-
         )
 
 Tool.create!(
@@ -17,9 +19,8 @@ Tool.create!(
         details: "3,500 step-by-step photographs, all the classics of French patisserie are made accessible for the home cook .For every serious home baker, French pastry represents the ultimate achievement. But to master the techniques, a written recipe can take you only so far—what is equally important is to see a professional in action, to learn the nuances of rolling out dough for croissaints or caramelizing apples for a tarte tatin",
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226434/1000w_gswmqo.jpg",
-        category: "book",
+        category: "books",
         user_id: user.id
-
         )
 
 
@@ -28,9 +29,8 @@ Tool.create!(
         details: "Macarons are the aristocrats of pastry; these brightly coloured, mini meringues, daintily sandwiched together with gooey fillings, have become a holy grail for cookery fanatics and there are even food blogs dedicated to them. Like Pierre Hermé's famous macarons, it would be difficult for any macaron book to surpass this one and indeed the hardback edition has been a universal bestseller. There are 208 pages of recipes and beautiful food photography, and because making macarons is mostly about technique, rather than just a standard recipe, readers will appreciate the 32-step-by-step photo-illustrated",
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615228470/411c-yg-41L_lukckm.jpg",
-        category: "book",
+        category: "books",
         user_id: user.id
-
         )
 
 Tool.create!(
@@ -38,9 +38,8 @@ Tool.create!(
         details: "Dorie Greenspan has written recipes for the most eminent chefs in the world: Pierre Hermé, Daniel Boulud, and arguably the greatest of them all, Julia Child, who once told Dorie, “You write recipes just the way I do.” Her recipe writing has won widespread praise for its literate curiosity and “patient but exuberant style.” (One hard-boiled critic called it “a joy forever.”) In Baking: From My Home to Yours, her masterwork, Dorie applies the lessons from three decades of experience to her first and real love: home baking. The 300 recipes will seduce a new generation of bakers, whether their favorite kitchen tools are a bowl and a whisk or a stand mixer and a baker’s torch.",
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615228520/7BC0E0D8D0-A765-4F80-BF74-1D8A08A657C1_7DImg100_xapasp.jpg",
-        category: "book",
+        category: "books",
         user_id: user.id
-
         )
 
 Tool.create!(
@@ -48,9 +47,8 @@ Tool.create!(
         details: "This comprehensive set of seamless stainless steel piping nozzles will allow you to ice a massive range of patterns on so many of your distinct cake decorating projects. With a reusable Piping Bag",
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226742/Que-faire-avec-une-poche-a-douille_wpjr4j.jpg",
-        category:"accessory",
+        category: "accessory",
         user_id: user.id
-
         )
 
 Tool.create!(
@@ -96,7 +94,7 @@ Tool.create!(
         details: "Durable Quality: Used the highest quality food-grade silicone material, BPA free and stick-resistant, easy to clean and fade resistant. Resists temperatures is from -40℉ to 470℉. This means you can take it straight out of the freezer and into the oven and vice versa without damage.",
         price_by_day: 3,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226880/61a5ingveDL._AC_SL1001__env4ac.jpg",
-        category:"accessory",
+        category: "accessory",
         user_id: user.id
         )
 
@@ -139,7 +137,6 @@ Tool.create!(
         category: "accessory",
         user_id: user.id
         )
-
 
 Tool.create!(
         name: "Airbrush gun & compressor",

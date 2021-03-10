@@ -1,0 +1,39 @@
+
+
+
+.title h1 {
+      font-family: arial serif;
+      font-weight: bold;
+      font-size: 50px;
+      color: #6088E0;
+      margin: 20px 30px;
+}
+
+.title p {color: #6088E0;
+  margin: 0px 30px;
+}
+
+
+.firstimage{box-shadow: 5px 3px 2px rgba(0, 0, 0, 0.3);
+            width:265px;
+            height:265px;
+            border-radius:10px;
+            margin:20px 5px;
+            padding: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          }
+
+.cards{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+
+.firstimage img{box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+            width:265px;
+            height:265px;
+            border-radius:10px;
+            margin:20px 5px;
+            padding: 1px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          }
