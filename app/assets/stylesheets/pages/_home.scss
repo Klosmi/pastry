@@ -1,4 +1,16 @@
 // Specific CSS for your home-page
-h1, h2, h3, h4, p, a {
+body {
   color: #2C423D;
+}
+.container {
+  display: flex;
+  position: relative;
+}
+.home_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 900;
 }

@@ -1,6 +1,9 @@
  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag ("https://res.cloudinary.com/dnnfzdn9e/image/upload/v1615327579/Pastry%20Project/Logo_i8gkm7.png") %>
+
+
+   <%= image_tag ("https://res.cloudinary.com/dnnfzdn9e/image/upload/v1615327579/Pastry%20Project/Logo_i8gkm7.png") %>
+
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,8 +15,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="userimage">
-         <%= cl_image_tag ("https://res.cloudinary.com/dnnfzdn9e/image/upload/v1615330861/Pastry%20Project/User_nay7rk.png") %>
-       </li>
+
+         <%= image_tag ("https://res.cloudinary.com/dnnfzdn9e/image/upload/v1615330861/Pastry%20Project/User_nay7rk.png") %>
+        </li>
+
         <li class="nav-item mt-2 text-success">
          <strong> <%= current_user.email %> </strong>
         </li>
