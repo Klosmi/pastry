@@ -4,8 +4,10 @@ class Tool < ApplicationRecord
    belongs_to :user
   validates :name, presence: true, uniqueness: true
   validates_format_of :picture, with: /\.(png|jpg|jpeg)\z/i, message: "Bad format. Should be an image url!"
+
    validates :details, presence: true
    validates :category, inclusion: {in: CATEGORY}
+
 end
 
 ## Code Equipe ##
