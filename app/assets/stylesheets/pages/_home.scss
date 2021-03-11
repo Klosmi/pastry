@@ -2,16 +2,75 @@
 body {
   color: #2C423D;
 }
-.container {
-  display: flex;
-  position: relative;
-  background-image: url("https://res.cloudinary.com/dkqxfdutt/image/upload/v1615218918/stock-photo-cooking-prep[…]on-cookware-d63e9f58-a666-4da8-ae93-328c872485a7_yrx1s6.jpg");
+.photo_titre {
+  color: white;
+  margin: 3px;
+  // display: flex;
+  // position: relative;
+  background-image: url("https://res.cloudinary.com/dkqxfdutt/image/upload/v1615400365/image_lbdz9a.jpg");
+  width: 1430px;
+  height: 750px;
+  background: linear-gradient (rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
 }
-.home_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: Montserrat;
-  font-weight: 900;
+
+
+.bottom{ background-color: white;
+  color: grey;
+  font-weight: bolder;
+  border-radius: 10%;
+  padding:40px 46px;
+  margin: 100px 580px;
+  font-weight: 24px;
+  text-decoration: none;
+  }
+
+
+.bottom:hover {
+  background-color:white;
+  color:grey;
+  opacity: 0.90;
+  text-decoration: none;
 }
+
+.photo_titre p{
+      color: white;
+      padding: 360px 340px;
+      text-shadow: black 0.1em 0.1em 0.2em;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: Montserrat serif;
+
+}
+
+p {color:#9f785c;
+
+}
+
+
+.photo_titre h1{
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.2em;
+      padding: 50px;
+      font-weight: bold;
+      font-family: Montserrat serif;
+      font-size: 60px;
+}
+// .home_title {
+//       align-items: center;
+//       font-weight:bold;
+//       font-family: Montserrat ;
+//       font-size: 50px;
+
+
+// }
+
+
+// .home_title {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+//   font-family: Montserrat;
+//   font-weight: 900;
+// }
