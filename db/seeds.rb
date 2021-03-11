@@ -3,7 +3,7 @@ Tool.destroy_all if Rails.env.development?
 user= User.new(email:"lindak6@yahoo.fr", password:"password")
 user.save
 ## Code Equipe ##
-#user.save
+# user.save
 
 Tool.create!(
         name: "Molds for cupcake",
