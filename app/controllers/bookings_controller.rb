@@ -6,14 +6,21 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @tool = Tool.find(params[:tool_id])
     # @booking = @tool.booking.new(user: current_user)
-
+      #@tool = Tool.find(params[:tool_id])
+      @bookings = Booking.where(tool_id: @tool.id)
+      @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+      end
   end
 
   def create
     @tool = Tool.find(params[:tool_id])
-    @booking = @tool.bookings.new(booking_params) do |book|
-      book.user = current_user
+    @booking = Booking.new(all_params)
     # which person is booking the tool?
+
     if @booking.save
       # if @booking.free?
       #   redirect_to @booking
@@ -23,10 +30,11 @@ class BookingsController < ApplicationController
     else
       render :new
     end
-   end
   end
-
+  def all_params
+    params.require(:booking).permit(:start_date, :end_date, :total_amounts, :tool_id, :user_id)
+  end
   def booking_params
-    params.require(:booking).permit(items_attributes: [:start_date, :end_date, :total_amounts, :tool_id])
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

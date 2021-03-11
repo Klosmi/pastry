@@ -10,12 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_03_10_231842) do
+ActiveRecord::Schema.define(version: 2021_03_11_143749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "bookings", force: :cascade do |t|
     t.string "start_date"
@@ -24,8 +22,18 @@ ActiveRecord::Schema.define(version: 2021_03_10_231842) do
     t.bigint "tool_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "users_id"
     t.index ["tool_id"], name: "index_bookings_on_tool_id"
+    t.index ["users_id"], name: "index_bookings_on_users_id"
+  end
 
+  create_table "flats", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "tools", force: :cascade do |t|
@@ -48,13 +56,11 @@ ActiveRecord::Schema.define(version: 2021_03_10_231842) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "booking_id"
-    t.index ["booking_id"], name: "index_users_on_booking_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "bookings", "tools"
+  add_foreign_key "bookings", "users", column: "users_id"
   add_foreign_key "tools", "users"
-  add_foreign_key "users", "bookings"
 end
