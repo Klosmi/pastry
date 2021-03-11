@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :tool
-  has_many :user
+  belongs_to :user
   validates :total_amounts, presence: true, numericality: { greater_than: 0 }
   validates :total_amounts, presence: true
   # validates :start_date, :end_date, presence: true, availability: true
