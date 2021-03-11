@@ -1,28 +1,27 @@
 Tool.destroy_all if Rails.env.development?
 ## Code Linda ##
-user= User.new(email:"lindak6@yahoo.fr", password:"password")
+user= User.new(email:"lindak7@yahoo.fr", password:"password")
 user.save
 ## Code Equipe ##
 # user.save
 
 Tool.create!(
-        name: "Molds for cupcake",
-        details: "2 Muffins Tray 6 Stick resistant coating for quick release. Easy to clean Food grade Xynflon coating. Made with carbon steelDimensions W x D x H : 26.5x18.5x2.5cm",
+        name: "Round cake man-7 inch",
+        details: "Aluminium Round Cake Mould Cake Pan Cake Tin 7 Inches for Baking 750 Grams of Cake for Oven",
         price_by_day: 2,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615227032/5d4785af5dfd6_zamxr9.jpg",
-        category: "mold",
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615235745/5de933050ba91.image_uyrep7.jpg",
+        category: "accessory",
         user_id: user.id
         )
 
 Tool.create!(
-        name: "Christophe Felder’s Book :’patisserie’",
-        details: "3,500 step-by-step photographs, all the classics of French patisserie are made accessible for the home cook .For every serious home baker, French pastry represents the ultimate achievement. But to master the techniques, a written recipe can take you only so far—what is equally important is to see a professional in action, to learn the nuances of rolling out dough for croissaints or caramelizing apples for a tarte tatin",
-        price_by_day: 2,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226434/1000w_gswmqo.jpg",
-        category: "books",
+        name: "Airbrush gun & compressor",
+        details: "Excellent for any cake decorator who fancies trying air brushing but doesn't want to invest in a Dinkydoodle airbrush kit or Spectrum Flow airbrush kit. An ideal first airbrush kit.",
+        price_by_day: 8,
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615236294/Lakeland_Airbrush_Cake_Hero_ccdte4.jpg",
+        category: "accessory",
         user_id: user.id
         )
-
 
 Tool.create!(
         name: "Pierre Hermé’ s book: ‘Macarons’",
@@ -127,22 +126,22 @@ Tool.create!(
         category: "accessory",
         user_id: user.id
         )
-
-
 Tool.create!(
-        name: "Round cake man-7 inch",
-        details: "Aluminium Round Cake Mould Cake Pan Cake Tin 7 Inches for Baking 750 Grams of Cake for Oven",
+        name: "Molds for cupcake",
+        details: "2 Muffins Tray 6 Stick resistant coating for quick release. Easy to clean Food grade Xynflon coating. Made with carbon steelDimensions W x D x H : 26.5x18.5x2.5cm",
         price_by_day: 2,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615235745/5de933050ba91.image_uyrep7.jpg",
-        category: "accessory",
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615227032/5d4785af5dfd6_zamxr9.jpg",
+        category: "mold",
         user_id: user.id
         )
 
 Tool.create!(
-        name: "Airbrush gun & compressor",
-        details: "Excellent for any cake decorator who fancies trying air brushing but doesn't want to invest in a Dinkydoodle airbrush kit or Spectrum Flow airbrush kit. An ideal first airbrush kit.",
-        price_by_day: 8,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615236294/Lakeland_Airbrush_Cake_Hero_ccdte4.jpg",
-        category: "accessory",
+        name: "Christophe Felder’s Book :’patisserie’",
+        details: "3,500 step-by-step photographs, all the classics of French patisserie are made accessible for the home cook .For every serious home baker, French pastry represents the ultimate achievement. But to master the techniques, a written recipe can take you only so far—what is equally important is to see a professional in action, to learn the nuances of rolling out dough for croissaints or caramelizing apples for a tarte tatin",
+        price_by_day: 2,
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226434/1000w_gswmqo.jpg",
+        category: "books",
         user_id: user.id
         )
+
+
