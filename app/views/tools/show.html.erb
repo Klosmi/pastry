@@ -14,7 +14,7 @@
        <%= image_tag @tool.picture, alt: "Responsive image", class: "img-fluide"   %>
         <br>
         <br>
-        <button type="button" class="btn btn-secondary btn-lg"> + Book</button>
+        <button type="button" class="btn btn-secondary btn-lg"> <%= link_to "Go to booking tool", new_tool_booking_path(@tool) %></button>
       </div>
 
       <div class="col-8">
@@ -35,5 +35,6 @@
   </div>
 
 </body>
+
 
 
