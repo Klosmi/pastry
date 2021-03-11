@@ -1,24 +1,15 @@
-
-
-<div class= "container">
-
-  <div class="title" >
-    <h1>All Tools</h1>
-
-      <div class= "cards">
-        <% @tools.each do |tool| %>
-            <div class="firstimage" >
-               <%= image_tag tool.picture %>
-               <p><%= link_to tool.name, tool_path(tool) %></p>
+<div class="container">
+    <div class="title">
+        <h1>All Tools</h1>
+        <div class="cards">
+            <% @tools.each do |tool| %>
+            <div class="firstimage">
+                <%= image_tag tool.picture %>
+                <p>
+                    <%= link_to tool.name, tool_path(tool) %>
+                </p>
             </div>
             <% end %>
-
-      </div>
-  </div>
+        </div>
+    </div>
 </div>
-
-
-
-
-
-
