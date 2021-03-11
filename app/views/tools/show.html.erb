@@ -1,40 +1,38 @@
-
-
+<% if notice %>
+<p id="notice">
+    <%= notice %>
+</p>
+<% end %>
 <h1 class="text-center">Detail Tool</h1>
 <br>
 <br>
-<body>
-  <div class="container">
-
-
-
-    <div class="row1">
-
-      <div class="image-ustensil">
-       <%= image_tag @tool.picture, alt: "Responsive image", class: "img-fluide"   %>
-        <br>
-        <br>
-        <button type="button" class="btn btn-secondary btn-lg"> <%= link_to "Go to booking tool", new_tool_booking_path(@tool) %></button>
-      </div>
-
-      <div class="col-8">
-        <h4 class="text-sm-left"><%= @tool.category %></h4>
-
-        <br>
-        <h3 class="text-sm-left"><%= @tool.name %></h3>
-        <p class="text-sm-left"><%= @tool.details %></p>
-        <br>
-        <h2 class="text-sm-left"><%= @tool.price_by_day %> €</h2>
-
-      </div>
-      <div class="col-2">
-        <h4 class="text-center">reviews</h4>
-      </div>
+    <div class="container">
+        <div class="row1">
+            <div class="image-ustensil">
+                <%= image_tag @tool.picture, alt: "Responsive image", class: "img-fluide"   %>
+                <br>
+                <br>
+                <button type="button" class="btn btn-secondary btn-lg"> <%= link_to "Go to booking tool", new_tool_booking_path(@tool) %></button>
+            </div>
+            <div class="col-8">
+                <h4 class="text-sm-left">
+                    <%= @tool.category %>
+                </h4>
+                <br>
+                <h3 class="text-sm-left">
+                    <%= @tool.name %>
+                </h3>
+                <p class="text-sm-left">
+                    <%= @tool.details %>
+                </p>
+                <br>
+                <h2 class="text-sm-left">
+                    <%= @tool.price_by_day %> €</h2>
+            </div>
+            <div class="col-2">
+                <h4 class="text-center">Where?</h4>
+                <!-- map -->
+                <div id="map" style="width: 300px; height: 400px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+            </div>
+        </div>
     </div>
-
-  </div>
-
-</body>
-
-
-

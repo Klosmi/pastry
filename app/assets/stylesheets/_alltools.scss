@@ -1,29 +1,35 @@
-
-
-
 .title h1 {
       font-family: arial serif;
       font-weight: bold;
       font-size: 50px;
-      color: #6088E0;
-      margin: 20px 30px;
+      color: #9f785c;
+      margin: 20px 445px;
 }
 
-.title p {color: #6088E0;
+.title p {color: #9f785c;
   margin: 0px 30px;
+  text-decoration: none;
 }
 
 .cards{
+
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1300px;
   }
 
+.firstimage img:hover{
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.27);
+      transition-duration: 700ms;
 
-.firstimage img{box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
-            width:265px;
-            height:265px;
-            border-radius:10px;
-            margin:20px 5px;
-            padding: 1px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-          }
+}
+.firstimage img {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    width: 265px;
+    height: 265px;
+    border-radius: 10px;
+    margin: 20px 5px;
+    padding: 1px;
+    transition-duration: 900ms;
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+}

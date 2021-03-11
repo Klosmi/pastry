@@ -19,3 +19,23 @@
   width: 25px ;
   margin: 7px 5px;
 }
+
+
+.nav-link {
+  font-family: Montserrat, sans-serif;
+}
+
+.navbar-brand {
+  opacity: 1;
+}
+.navbar-brand:hover {
+  opacity: 0.5;
+  transition-duration: 700ms;
+}
+
+strong {
+  font-family: Montserrat, sans-serif;
+}
+
+p {color:#673914}
+

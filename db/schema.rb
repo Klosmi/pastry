@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_10_200407) do
+
+ActiveRecord::Schema.define(version: 2021_03_10_231842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "bookings", force: :cascade do |t|
     t.string "start_date"
@@ -23,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_10_200407) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["tool_id"], name: "index_bookings_on_tool_id"
+
   end
 
   create_table "tools", force: :cascade do |t|
