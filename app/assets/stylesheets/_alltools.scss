@@ -1,14 +1,52 @@
-.title h1 {
-      font-family: arial serif;
-      font-weight: bold;
-      font-size: 50px;
-      color: #9f785c;
-      margin: 20px 445px;
+
+.title {
+  margin: 0px 0px 0px 30px;
+  padding: 20px;
+  overflow: hidden;
+  width:1350px;
+  background: #f3f0e8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  object-fit: cover;
+
 }
 
-.title p {color: #9f785c;
-  margin: 0px 30px;
+.description {
+    width: 300px;
+    height: 85px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.27);
+    border-radius:8px;
+
+}
+
+.title h1 {
+      font-family: Montserrat, sans-serif;
+      // font-weight: bold;
+      font-size: 35px;
+      color: #9f785c;
+
+}
+
+.price p {
+  margin: 1px 1px 2px 230px;
+  color: black;
   text-decoration: none;
+  position: relative;
+}
+
+// .description .price p {
+  // text-align:bottom right;
+// }
+
+.product p {
+  margin: 5px;
+  & a {
+  color: grey;
+  font-weight: bolder;
+
+  font-weight: 24px;
+  text-decoration: none;
+  }
 }
 
 .cards{
@@ -25,8 +63,8 @@
 }
 .firstimage img {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
-    width: 265px;
-    height: 265px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
     margin: 20px 5px;
     padding: 1px;
