@@ -18,22 +18,19 @@ class BookingsController < ApplicationController
 
   def create
     @tool = Tool.find(params[:tool_id])
-    @booking = Booking.new(all_params)
+    @booking = Booking.new(booking_params)
     # which person is booking the tool?
+    @booking.tool = @tool
+    @booking.user = current_user
+    @booking.total_amounts = @tool.price_by_day * (@booking.end_date.to_date - @booking.start_date.to_date).to_i
 
     if @booking.save
-      # if @booking.free?
-      #   redirect_to @booking
-      # else
-      #   redirect_to new_payment_path(@booking)
-      # end
+      render "tools/show", notice: "Booking is saved"
     else
       render :new
     end
   end
-  def all_params
-    params.require(:booking).permit(:start_date, :end_date, :total_amounts, :tool_id, :user_id)
-  end
+
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
   end

@@ -11,7 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 2021_03_11_150643) do
+ActiveRecord::Schema.define(version: 2021_03_11_143749) do
+
 
 
 
@@ -25,13 +26,10 @@ ActiveRecord::Schema.define(version: 2021_03_11_150643) do
     t.bigint "tool_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.index ["tool_id"], name: "index_bookings_on_tool_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
 
-
-
-
-    t.index ["users_id"], name: "index_bookings_on_users_id"
 
   end
 
@@ -73,6 +71,6 @@ ActiveRecord::Schema.define(version: 2021_03_11_150643) do
   end
 
   add_foreign_key "bookings", "tools"
-  add_foreign_key "bookings", "users", column: "users_id"
+  add_foreign_key "bookings", "users"
   add_foreign_key "tools", "users"
 end
