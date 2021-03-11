@@ -5,17 +5,20 @@
       font-family: arial serif;
       font-weight: bold;
       font-size: 50px;
-      color: #6088E0;
-      margin: 20px 30px;
+      color: #9f785c;
+      margin: 20px 445px;
 }
 
-.title p {color: #6088E0;
+.title p {color: #9f785c;
   margin: 0px 30px;
+  text-decoration: none;
 }
 
 .cards{
+
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1300px;
   }
 
 
