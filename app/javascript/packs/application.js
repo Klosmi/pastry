@@ -23,7 +23,9 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+
 import 'mapbox-gl/dist/mapbox-gl.css';
+import "../plugins/flatpickr";
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 
