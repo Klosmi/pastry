@@ -11,7 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 2021_03_11_143749) do
+ActiveRecord::Schema.define(version: 2021_03_11_150643) do
+
 
 
   # These are extensions that must be enabled in order to support this database
@@ -28,6 +29,8 @@ ActiveRecord::Schema.define(version: 2021_03_11_143749) do
     t.index ["tool_id"], name: "index_bookings_on_tool_id"
 
 
+
+
     t.index ["users_id"], name: "index_bookings_on_users_id"
 
   end
@@ -39,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_03_11_143749) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
+
   end
 
   create_table "tools", force: :cascade do |t|
@@ -50,6 +54,9 @@ ActiveRecord::Schema.define(version: 2021_03_11_143749) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_tools_on_user_id"
   end
 

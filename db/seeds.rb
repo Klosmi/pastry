@@ -1,6 +1,7 @@
 Tool.destroy_all if Rails.env.development?
 ## Code Linda ##
-user= User.new(email:"lindak8@yahoo.fr", password:"password")
+
+user= User.new(email:"lindak10@yahoo.fr", password:"password")
 user.save
 ## Code Equipe ##
 # user.save
@@ -9,17 +10,20 @@ Tool.create!(
         name: "Round cake man-7 inch",
         details: "Aluminium Round Cake Mould Cake Pan Cake Tin 7 Inches for Baking 750 Grams of Cake for Oven",
         price_by_day: 2,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615235745/5de933050ba91.image_uyrep7.jpg",
-        category: "accessory",
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615227032/5d4785af5dfd6_zamxr9.jpg",
+        category: "mold",
+        address: "16 Villa Gaudelet, Paris",
         user_id: user.id
         )
 
 Tool.create!(
-        name: "Airbrush gun & compressor",
-        details: "Excellent for any cake decorator who fancies trying air brushing but doesn't want to invest in a Dinkydoodle airbrush kit or Spectrum Flow airbrush kit. An ideal first airbrush kit.",
-        price_by_day: 8,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615236294/Lakeland_Airbrush_Cake_Hero_ccdte4.jpg",
-        category: "accessory",
+
+        name: "Christophe Felder’s Book :’patisserie’",
+        details: "3,500 step-by-step photographs, all the classics of French patisserie are made accessible for the home cook .For every serious home baker, French pastry represents the ultimate achievement. But to master the techniques, a written recipe can take you only so far—what is equally important is to see a professional in action, to learn the nuances of rolling out dough for croissaints or caramelizing apples for a tarte tatin",
+        price_by_day: 2,
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226434/1000w_gswmqo.jpg",
+        category: "books",
+        address: "113 rue Jean de Bernardy, Marseille",
         user_id: user.id
         )
 
@@ -29,6 +33,7 @@ Tool.create!(
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615228470/411c-yg-41L_lukckm.jpg",
         category: "books",
+        address: "1 rue Viala, Avignon",
         user_id: user.id
         )
 
@@ -38,6 +43,7 @@ Tool.create!(
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615228520/7BC0E0D8D0-A765-4F80-BF74-1D8A08A657C1_7DImg100_xapasp.jpg",
         category: "books",
+        address: "167 rue Paradis, Marseille",
         user_id: user.id
         )
 
@@ -47,6 +53,7 @@ Tool.create!(
         price_by_day: 2,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226742/Que-faire-avec-une-poche-a-douille_wpjr4j.jpg",
         category: "accessory",
+        address: "125 rue de Rome, Marseille",
         user_id: user.id
         )
 
@@ -56,6 +63,7 @@ Tool.create!(
         price_by_day: 1,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615220240/e2af485c6971cd0395dfa4006ef38af6_nocq6c.jpg",
         category: "accessory",
+        address: "22 rue de Graffigny, Nancy",
         user_id: user.id
         )
 
@@ -65,6 +73,7 @@ Tool.create!(
         price_by_day: 1,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226595/arthur-martin-pese-aliment_rpyu9t.jpg",
         category: "accessory",
+        address: "Attila út 73, Budapest",
         user_id: user.id
         )
 
@@ -74,6 +83,7 @@ Tool.create!(
         price_by_day: 20,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615231227/kitchenaid-artisan-725x425_smlr1i.jpg",
         category: "robot",
+        address: "5-1 rue de Marseille, Lyon",
         user_id: user.id
         )
 
@@ -84,6 +94,7 @@ Tool.create!(
         price_by_day: 5,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226965/5c297bbd6756d_wielyg.jpg",
         category: "accessory",
+        address: "35 rue Taison, Metz",
         user_id: user.id
         )
 
@@ -94,6 +105,7 @@ Tool.create!(
         price_by_day: 3,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226880/61a5ingveDL._AC_SL1001__env4ac.jpg",
         category: "accessory",
+        address: "22 rue de Graffigny, Nancy",
         user_id: user.id
         )
 
@@ -104,6 +116,7 @@ Tool.create!(
         price_by_day: 3,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615233883/image_asujc7.png",
         category: "accessory",
+        address: "6 rue de Fossé, Strasbourg",
         user_id: user.id
         )
 
@@ -114,6 +127,7 @@ Tool.create!(
         price_by_day: 15,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615234518/Cookbook-Bamix_74423b76-dbe4-43f7-bedb-d8e1ab541f10_700x700_pinhrn.jpg",
         category: "robot",
+        address: "68 rue Royale, Lille",
         user_id: user.id
         )
 
@@ -124,23 +138,26 @@ Tool.create!(
         price_by_day: 3,
         picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615235001/Alpha-Grillers-Instant-Read-Meat-Thermometer-2-6dd0799147b4491c9a1d396f421f1d35_ogf5kf.jpg",
         category: "accessory",
+        address: "15 avenue de la République, Paris",
         user_id: user.id
         )
 Tool.create!(
         name: "Molds for cupcake",
         details: "2 Muffins Tray 6 Stick resistant coating for quick release. Easy to clean Food grade Xynflon coating. Made with carbon steelDimensions W x D x H : 26.5x18.5x2.5cm",
         price_by_day: 2,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615227032/5d4785af5dfd6_zamxr9.jpg",
-        category: "mold",
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615235745/5de933050ba91.image_uyrep7.jpg",
+        category: "accessory",
+        address: "2 place Johann Strauss, Paris",
         user_id: user.id
         )
 
 Tool.create!(
-        name: "Christophe Felder’s Book :’patisserie’",
-        details: "3,500 step-by-step photographs, all the classics of French patisserie are made accessible for the home cook .For every serious home baker, French pastry represents the ultimate achievement. But to master the techniques, a written recipe can take you only so far—what is equally important is to see a professional in action, to learn the nuances of rolling out dough for croissaints or caramelizing apples for a tarte tatin",
-        price_by_day: 2,
-        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615226434/1000w_gswmqo.jpg",
-        category: "books",
+        name: "Airbrush gun & compressor",
+        details: "Excellent for any cake decorator who fancies trying air brushing but doesn't want to invest in a Dinkydoodle airbrush kit or Spectrum Flow airbrush kit. An ideal first airbrush kit.",
+        price_by_day: 8,
+        picture: "https://res.cloudinary.com/dkqxfdutt/image/upload/v1615236294/Lakeland_Airbrush_Cake_Hero_ccdte4.jpg",
+        category: "accessory",
+        address: "Ritterstraße 9, Berlin",
         user_id: user.id
         )
 
