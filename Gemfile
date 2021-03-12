@@ -34,8 +34,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
-gem "algoliasearch-rails"
-gem 'algolia', '~> 2.0', '>= 2.0.4'
+gem 'pg_search', '~> 2.3.0'
+# gem "algoliasearch-rails"
+# gem 'algolia', '~> 2.0', '>= 2.0.4'
 # gem 'cloudinary'
 
 
