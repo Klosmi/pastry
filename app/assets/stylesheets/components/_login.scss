@@ -1,0 +1,34 @@
+.loginpage{
+  color: #E39D2A !important;
+}
+.new_user {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.login {
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.field {
+    padding: 7px;
+}
+
+#user_email,
+#user_password {
+    border-radius: 50px;
+    width: 250px;
+    background-color: #FCDAA4;
+    border-style: none;
+}
+
+.form-actions .btn {
+    background-color: #fcdaa47a;
+    color: #E39D2A;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 82px;
+    margin-bottom: 20px;
+}
