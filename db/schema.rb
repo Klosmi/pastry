@@ -27,15 +27,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_083033) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "flats", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
-  end
-
   create_table "tools", force: :cascade do |t|
     t.string "name"
     t.text "details"
