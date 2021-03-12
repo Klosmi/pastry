@@ -1,4 +1,5 @@
-Tool.destroy_all if Rails.env.development?
+Tool.destroy_all
+User.destroy_all
 ## Code Linda ##
 
 user= User.new(email:"linda.ounissi@outlook.fr", password:"password")
