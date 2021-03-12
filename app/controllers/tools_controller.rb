@@ -14,6 +14,12 @@ class ToolsController < ApplicationController
   # Get/tools/1
   def show
     @tool = Tool.find(params[:id])
+      @markers = [@tool].map do |map|
+      {
+        lat: map.latitude,
+        lng: map.longitude
+      }
+    end
   end
 
   def new
