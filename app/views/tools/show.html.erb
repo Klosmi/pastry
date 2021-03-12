@@ -32,10 +32,14 @@
                     <%= @tool.price_by_day %> €</h2>
             </div>
             <div class="col-4">
-                <h4 class="text-center">Where?</h4>
-                <strong><p class="text-center"><%= @tool.address %></p></strong>
+                <h4 class="text-center"></h4>
+                <strong><p class="text-center"></p></strong>
+
+                 </div>
                 <!-- map -->
                 <div id="map" style="width: 400px; height: 400px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+              </div>
+               </div>
             </div>
         </div>
     </div>
