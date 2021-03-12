@@ -11,9 +11,20 @@ class ToolsController < ApplicationController
     end
   end
 
-  # Get/tools/1
+  # Get/tools/:id
   def show
     @tool = Tool.find(params[:id])
+    @booking = Booking.new
+
+    # @booking = @tool.booking.new(user: current_user)
+      #@tool = Tool.find(params[:tool_id])
+      @bookings = Booking.where(tool_id: @tool.id)
+      @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+      end
   end
 
   def new
@@ -29,10 +40,10 @@ class ToolsController < ApplicationController
     respond_to do |format|
       if @tool.save
         format.html { redirect_to @tool, notice: "Tool was successfully created." }
-        format.json { render :show, status: :created, location: @tool }
+       # format.json { render :show, status: :created, location: @tool }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @tool.errors, status: :unprocessable_entity }
+       # format.json { render json: @tool.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,10 +52,10 @@ class ToolsController < ApplicationController
     respond_to do |format|
       if @tool.update(tool_params)
         format.html { redirect_to @tool, notice: "Tool was successfully updated." }
-        format.json { render :show, status: :ok, location: @tool }
+       # format.json { render :show, status: :ok, location: @tool }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @tool.errors, status: :unprocessable_entity }
+      #  format.json { render json: @tool.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -53,7 +64,7 @@ class ToolsController < ApplicationController
     @tool.destroy
     respond_to do |format|
       format.html { redirect_to tools_url, notice: "Tool was successfully destroyed." }
-      format.json { head :no_content }
+    #  format.json { head :no_content }
     end
   end
 
