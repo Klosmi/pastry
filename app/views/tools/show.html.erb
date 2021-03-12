@@ -1,41 +1,45 @@
 <% if notice %>
 <p id="notice">
-    <%= notice %>
+  <%= notice %>
 </p>
 <% end %>
-<h1 class="text-center">Detail Tool</h1>
-<br>
-<br>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-            <div class="image-ustensil">
-                <%= image_tag @tool.picture, alt: "Responsive image", class: "img-fluide"   %>
-                <br>
-                <br>
-                <button type="button" class="btn btn-secondary btn-lg"> <%= link_to "Go to booking tool", new_tool_booking_path(@tool) %></button>
+<div class="brown">
+  <h1>All The Information Aboud :</h1>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row1">
+      <div class="image-ustensil">
+        <%= image_tag @tool.picture, alt: "Responsive image", class: "img-fluide"%>
+        <br>
+        <br>
+        <!-- <button type="button" class="btn btn-secondary btn-lg">
+          <%= link_to "Book your tool", new_tool_booking_path(@tool) %> -->
+          <button type="button" class="booktool"><%= link_to "Book your tool", new_tool_booking_path(@tool) %></div>
+          <div class="col-8">
+            <div class="surnom">
+              <h9 class="text-sm-left"><%= @tool.name %></h9>
+            </div>
+            <div class="cat">
+              <h4 class="text-sm-left"><%= @tool.category %></h4>
+            </div>
+            <br>
+            <div class="details">
+              <p class="text-sm-left">
+                <%= @tool.details %>
+              </p>
+            </div>
+            <br>
+            <div class="price">
+              <h7 class="text-sm-left">
+                $<%= @tool.price_by_day %>/day</h7>
             </div>
           </div>
-            <div class="col-4">
-                <h4 class="text-sm-left">
-                    <%= @tool.category %>
-                </h4>
-                <br>
-                <h3 class="text-sm-left">
-                    <%= @tool.name %>
-                </h3>
-                <p class="text-sm-left">
-                    <%= @tool.details %>
-                </p>
-                <br>
-                <h2 class="text-sm-left">
-                    <%= @tool.price_by_day %> €</h2>
-            </div>
-            <div class="col-4">
-                <h4 class="text-center">Where?</h4>
-                <strong><p class="text-center"><%= @tool.address %></p></strong>
-                <!-- map -->
-                <div id="map" style="width: 400px; height: 400px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-            </div>
+          <div class="col-2">
+            <h4 class="text-center">Localisation:</h4>
+            <!-- map -->
+            <div id="map" style="width: 300px; height: 400px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+          </div>
         </div>
+      </div>
     </div>
