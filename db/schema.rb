@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_11_150643) do
     t.bigint "user_id"
     t.index ["tool_id"], name: "index_bookings_on_tool_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+
   end
 
   create_table "flats", force: :cascade do |t|
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_03_11_150643) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
+
   end
 
   create_table "tools", force: :cascade do |t|
