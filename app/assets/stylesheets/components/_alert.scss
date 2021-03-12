@@ -1,6 +1,19 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
+  color: #F28482;
+  bottom: 18px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  z-index: 1000;
+}
+
+
+.notice {
+  color: #9EC1B9;
+  margin-top: 30px;
+  bottom: 18px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
   z-index: 1000;
 }
