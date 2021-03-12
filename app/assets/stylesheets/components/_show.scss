@@ -1,7 +1,95 @@
+
+
+
+h12{
+  & a {
+  background-color:#f3f0e8;
+
+  }
+  font-weight:20px;
+
+
+}
+
+
+.booktool{
+  margin: 10px 10px 10px 150px;
+  border-radius: 7%;
+  background-color: #9f785c;
+  opacity:0.6;
+  width:150px;
+  height:60px;
+  & a {
+  color: #f3f0e8;
+  font-weight: bolder;
+  font-weight: 12px;
+  text-decoration: none;
+
+  }
+  }
+
+
+//   .booktool img:hover{
+//   background-color:#f3f0e8;
+//   width:300px;
+//   height: 60px;
+//   color:#9f785c;
+
+// & a {
+//   color:#9f785c;
+//   opacity: 0.90;
+//   text-decoration: none;
+//   }
+// }
+
+
 .img-fluid {
   width: 100%;
   height: auto;
 }
+
+.col-8 {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.27);
+    border-radius:8px;
+    color: #9f785c;
+    font-weight: bolder;
+    // font-weight: 12px;
+    // font-family: Montserrat, sans-serif;
+
+.price {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #f3f0e8;
+  border-radius: 5px;
+  margin: 10px;
+  width: 80px;
+  height: 40px;
+  color: #9f785c;
+  front-size: 15px;
+}
+}
+
+// .price {font-size: 100px;
+//         background-color: yellow;
+
+      // }
+// .price{
+//   background-color: #f3f0e8;
+//   border-radius: 5px;
+//   margin: 1px 1px 2px 230px;
+//   color: #9f785c;
+//   text-decoration: none;
+//   position: relative;
+// }
+
+
+
+
 .row1{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,3 +99,68 @@
 .image-ustensil img{
   height:200px;
 }
+
+ .brown {
+  margin: 0px 0px 0px 30px;
+  padding: 20px;
+  overflow: hidden;
+  width:1380px;
+  background: #f3f0e8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+.image-ustensil img {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 20px 5px;
+    padding: 1px;
+    transition-duration: 900ms;
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h1 { font-family: Montserrat, serif;
+      // font-weight: bold;
+      font-size: 30px;
+      color: #9f785c;
+}
+
+ h7 { font-family: Montserrat, serif;
+      // font-weight: bold;
+      font-size: 15px;
+      color: #9f785c;
+      padding: 10px 1px 1px 10px;
+}
+
+
+h9 { font-family: Montserrat, sans-serif;
+      // font-weight: bold;
+      font-size: 20px;
+      color: #9f785c;
+}
+
+.details p{
+      color: #d2a495;
+}
+
+// .text-sm-left{ font-family: Montserrat, sans-serif;
+//       // font-weight: bold;
+//       font-size: 15px;
+//       color: #9f785c;
+// }
+
+#map{
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 20px 5px;
+    padding: 1px;
+    transition-duration: 900ms;
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color:white;
+}
+
+

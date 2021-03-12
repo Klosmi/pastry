@@ -2,12 +2,16 @@ class ToolsController < ApplicationController
 
    # Get/tools
   def index
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR details ILIKE :query OR category ILIKE :query"
+      @tools = Tool.where(sql_query, query: "%#{params[:query]}%")
+    else
     @tools = Tool.all
-        @markers = @tools.geocoded.map do |map|
-      {
-        lat: map.latitude,
-        lng: map.longitude
-      }
+      #   @markers = @tools.geocoded.map do |map|
+      # {
+      #   lat: map.latitude,
+      #   lng: map.longitude
+      # }
     end
   end
 
@@ -78,9 +82,8 @@ class ToolsController < ApplicationController
   end
 
   private
-
   def tool_params
     params.require(:tool).permit(:name, :address, :details, :price_by_day, :picture, :category, :user_id)
   end
-end
 
+end

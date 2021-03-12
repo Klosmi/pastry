@@ -17,14 +17,20 @@
 
 <body>
     <%= render 'shared/navbar' %>
-    <!-- notice and alert helper -->
-    <p class="notice d-flex justify-content-center">
-        <%= notice %>
-    </p>
-    <p class="alert d-flex justify-content-center">
+
+    <% if notice %>
+      <p class="notice">
+          <%= notice %>
+      </p>
+    <% end %>
+    <% if alert %>
+      <p class="alert">
+
         <%= alert %>
     </p>
-<%= yield %>
+    <% end %>
+    <%= yield %>
 </body>
 
 </html>
+
