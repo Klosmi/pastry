@@ -14,6 +14,7 @@ class ToolsController < ApplicationController
   # Get/tools/:id
   def show
     @tool = Tool.find(params[:id])
+
     @booking = Booking.new
 
     # @booking = @tool.booking.new(user: current_user)
@@ -25,6 +26,14 @@ class ToolsController < ApplicationController
         to:   booking.end_date
       }
       end
+
+      @markers = [@tool].map do |map|
+      {
+        lat: map.latitude,
+        lng: map.longitude
+      }
+    end
+
   end
 
   def new
