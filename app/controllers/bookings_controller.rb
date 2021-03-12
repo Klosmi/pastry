@@ -17,15 +17,16 @@ class BookingsController < ApplicationController
   end
 
   def create
+
     @tool = Tool.find(params[:tool_id])
     @booking = Booking.new(booking_params)
     # which person is booking the tool?
     @booking.tool = @tool
     @booking.user = current_user
-    @booking.total_amounts = @tool.price_by_day * (@booking.end_date - @booking.start_date).to_i
+    @booking.total_amounts = @tool.price_by_day * ((@booking.end_date - @booking.start_date).to_i + 1)
 
     if @booking.save
-      render "tools/show", notice: "Booking is saved"
+      redirect_to @tool, notice: "Booking is saved"
     else
       render :new
     end
