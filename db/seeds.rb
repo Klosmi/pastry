@@ -1,3 +1,4 @@
+Booking.destroy_all
 Tool.destroy_all
 User.destroy_all
 ## Code Linda ##
