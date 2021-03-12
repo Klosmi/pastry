@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
     # which person is booking the tool?
     @booking.tool = @tool
     @booking.user = current_user
-    @booking.total_amounts = @tool.price_by_day * (@booking.end_date.to_date - @booking.start_date.to_date).to_i
+    @booking.total_amounts = @tool.price_by_day * (@booking.end_date - @booking.start_date).to_i
 
     if @booking.save
       render "tools/show", notice: "Booking is saved"
