@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2021_03_12_083033) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "flats", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+  end
+
   create_table "tools", force: :cascade do |t|
     t.string "name"
     t.text "details"
@@ -50,8 +59,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_083033) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "booking_id"
-    t.index ["booking_id"], name: "index_users_on_booking_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -59,5 +66,4 @@ ActiveRecord::Schema.define(version: 2021_03_12_083033) do
   add_foreign_key "bookings", "tools"
   add_foreign_key "bookings", "users"
   add_foreign_key "tools", "users"
-  add_foreign_key "users", "bookings"
 end

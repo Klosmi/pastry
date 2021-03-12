@@ -16,21 +16,13 @@
 <% end %>
 
 
-<div class="cards">
-
+  <div class="cards">
             <% @tools.each do |tool| %>
             <div class="firstimage">
                 <%= image_tag tool.picture %>
                 <div class="description">
-                    <div class="product">
-                        <p>
-                            <%= link_to tool.name, tool_path(tool) %>
-                        </p>
-                    </div>
-                    <div class="price">
-                        <p>$
-                            <%= tool.price_by_day %> /day</p>
-                    </div>
+                  <div class="product"><p> <%= link_to tool.name, tool_path(tool) %></p></div>
+                  <div class="price"><p>$<%= tool.price_by_day %> /day</p></div>
                 </div>
             </div>
             <% end %>

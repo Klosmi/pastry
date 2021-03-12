@@ -1,4 +1,7 @@
 
+ .container {
+    margin-left: 0;
+}
 .title {
   margin: 0px 0px 0px 30px;
   padding: 20px;
@@ -41,6 +44,7 @@
   color: #9f785c;
   text-decoration: none;
   position: relative;
+  font-size: 15px;
 }
 
 // .description .price p {
@@ -58,8 +62,8 @@
   & a {
   color: #9f785c;
   font-weight: bolder;
-
-  font-weight: 24px;
+  font-size: 12px;
+  font-weight: 14px;
   text-decoration: none;
   }
 }
